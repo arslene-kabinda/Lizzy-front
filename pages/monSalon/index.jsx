@@ -3,6 +3,7 @@ import { SalonContainer } from "../../styles/SalonStyle";
 import imgSalon from "../../public/assets/salon.jpeg";
 import { Option, Service } from "../../styles/BookingStyle";
 import CardBooking from "../../src/components/card-booking/Card";
+import Image from "next/image";
 
 const MonSalon = () => {
   const [barberDescription, setBarberDescription] = useState();
@@ -52,7 +53,7 @@ const MonSalon = () => {
       price: priceInput,
     });
     const createServiceResponse = await fetch(
-      `http://127.0.0.1:4001/api/services`,
+      `https://lizzy-app.onrender.com/api/services`,
       {
         method: "POST",
         headers: {
@@ -86,95 +87,14 @@ const MonSalon = () => {
             <h2>{barberDescription.name}</h2>
             <div className='containerImage_text'>
               <div className='containerImage'>
-                <img src={imgSalon.src} alt='salon de coiffure' />
+                <Image src={imgSalon} alt='salon de coiffure' />
               </div>
               <div className='description'>
                 <p>{barberDescription.description}</p>
               </div>
             </div>
           </section>
-          {/* <section>
-            <h3>Nos services</h3>
-            {barberDescription && barberDescription.length ? (
-              <div className='containerService'>
-                <div className='contentService'>
-                  <h5>Nom du service </h5>
-                  <p>La description</p>
-                  <p>30$</p>
-                </div>
-                <div>
-                  <div className='price'></div>
-
-                  <div className='btn'>
-                    <button type='submit'>Editer</button>
-                    <button type='submit'>Supprimer</button>
-                  </div>
-                </div>
-              </div>
-            ) : (
-              <h5>Aucun jusque là </h5>
-            )}
-
-            <div>
-              <form
-                method='post'
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  createService();
-                }}
-              >
-                <label htmlFor='name'>Nom du service</label>
-                <br></br>
-                <input
-                  value={nameInput}
-                  onChange={(e) => {
-                    setNameInput(e.target.value);
-                  }}
-                  type='text'
-                  name='name'
-                />{" "}
-                <br></br>
-                <label htmlFor='name'>Descriptions du service</label>
-                <br></br>
-                <textarea
-                  name='description'
-                  value={descriptionInput}
-                  onChange={(e) => {
-                    setDescriptionInput(e.target.value);
-                  }}
-                ></textarea>{" "}
-                <br></br>
-                <label htmlFor='name'>Choisir le prix</label>
-                <br></br>
-                <br></br>
-                <input
-                  value={priceInput}
-                  onChange={(e) => {
-                    setPriceInput(e.target.value);
-                  }}
-                  type='number'
-                  name='price'
-                />{" "}
-                <br></br>
-                <label htmlFor='name'>Prix du service</label>
-                <br></br>
-                <br></br>
-                <button type='submit'> Ajouter</button>
-              </form>
-            </div>
-          </section>
-          <section>
-            <h4>Nos réservations</h4>
-
-            <CardBooking
-              // key={_id}
-
-              alt='user'
-              userName='arsy'
-              serviceName='La description du service choisi'
-              time='le jour et la date de la reservation'
-            />
-          </section> */}
+        
         </>
       )}
     </SalonContainer>

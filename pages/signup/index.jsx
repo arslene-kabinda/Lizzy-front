@@ -75,7 +75,7 @@ const Signup = () => {
     initialValues,
     validationSchema,
     onSubmit: async (values) => {
-      const response = await fetch("http://127.0.0.1:4001/api/users/signup", {
+      const response = await fetch("https://lizzy-app.onrender.com/api/users/signup", {
         method: "POST",
         body: JSON.stringify(values),
         headers: {

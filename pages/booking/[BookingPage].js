@@ -56,7 +56,7 @@ const BookingPage = ({ hairSalon, services }) => {
   const [selectedService, setSelectedService] = useState();
 
   useEffect(() => {
-    if (window) {
+   
       let userStorage = localStorage.getItem("user");
       userStorage = userStorage
         ? JSON.parse(localStorage.getItem("user"))
@@ -67,7 +67,7 @@ const BookingPage = ({ hairSalon, services }) => {
       }
       setToken(tokenStorage);
       setUser(userStorage);
-    }
+   
   }, []);
 
   const requestBook = async () => {
@@ -79,7 +79,7 @@ const BookingPage = ({ hairSalon, services }) => {
       status: "pending",
     });
     const requestBookResponse = await fetch(
-      `http://127.0.0.1:4001/api/booking`,
+      `https://lizzy-app.onrender.com/api/booking`,
       {
         method: "POST",
         headers: {
@@ -243,7 +243,7 @@ const BookingPage = ({ hairSalon, services }) => {
 export default BookingPage;
 export async function getServerSideProps({ params }) {
   const res = await fetch(
-    `http://127.0.0.1:4001/api/hairSalons/${params.BookingPage}`
+    `https://lizzy-app.onrender.com/api/hairSalons/${params.BookingPage}`
   );
   const services = [];
   const { hairSalon } = await res.json();
@@ -251,7 +251,7 @@ export async function getServerSideProps({ params }) {
     const resu = await Promise.all(
       hairSalon?.service?.map(async ({ _id }) => {
         const response = await fetch(
-          `http://127.0.0.1:4001/api/services/${_id}`
+          `https://lizzy-app.onrender.com/api/services/${_id}`
         );
         const { service } = await response.json();
         services.push(service);

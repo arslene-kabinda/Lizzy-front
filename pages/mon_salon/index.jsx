@@ -90,7 +90,7 @@ const RegisterForm = () => {
             onSubmit={async (values, { resetForm }) => {
               values["owner"] = user._id;
               const response = await fetch(
-                "http://127.0.0.1:4001/api/hairSalons",
+                "https://lizzy-app.onrender.com/api/hairSalons",
                 {
                   method: "POST",
                   headers: {
@@ -123,13 +123,13 @@ const RegisterForm = () => {
                 </Grid>
                 <Grid item xs={12}>
                   <Typography sx={{ fontFamily: "Poppins" }}>
-                    Nom de l'établissement
+                    Nom de l&apos;établissement
                   </Typography>
                   <TextField name='name' />
                 </Grid>
                 <Grid item xs={12}>
                   <Typography sx={{ fontFamily: "Poppins" }}>
-                    Description de l'établissement
+                    Description de l&apos;établissement
                   </Typography>
                   <TextField name='description' />
                 </Grid>

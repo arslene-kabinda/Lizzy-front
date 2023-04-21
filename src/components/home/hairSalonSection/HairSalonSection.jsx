@@ -12,21 +12,20 @@ const HairSalonSection = () => {
   useEffect(() => {
     const getSalon = async () => {
       try {
-        const getAllSalonUrl = `http://127.0.0.1:4001/api/hairSalons`;
+        const getAllSalonUrl = `https://lizzy-app.onrender.com/api/hairSalons`;
         const response = await fetch(getAllSalonUrl);
         const data = await response.json();
 
         setHairSalon(data.hairSalons.slice(0, 8));
       } catch (err) {
         setError(err.message);
-        console.log(error);
       }
     };
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
 
     getSalon();
-  }, []);
+  }, );
 
   return (
     <HairSalonContainer>

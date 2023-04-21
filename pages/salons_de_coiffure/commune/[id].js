@@ -257,10 +257,10 @@ export default DetailSalon;
 export async function getServerSideProps(context) {
   // console.log(context.query);
   const res = await fetch(
-    `http://127.0.0.1:4001/api/hairSalons?township=${context.query.id}`
+    `https://lizzy-app.onrender.com/api/hairSalons?township=${context.query.id}`
   );
   const response = await fetch(
-    `http://127.0.0.1:4001/api/township/${context.query.id}`
+    `https://lizzy-app.onrender.com/api/township/${context.query.id}`
   );
 
   const township = await response.json();

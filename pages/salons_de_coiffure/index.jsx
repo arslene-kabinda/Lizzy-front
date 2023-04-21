@@ -153,7 +153,7 @@ const Salons = ({ posts }) => {
 export default Salons;
 
 export async function getStaticProps() {
-  const res = await fetch(`http://127.0.0.1:4001/api/township`);
+  const res = await fetch(`https://lizzy-app.onrender.com/api/township`);
   const posts = await res.json();
 
   return {

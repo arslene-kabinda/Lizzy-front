@@ -44,7 +44,7 @@ const Login = ({ handleChange }) => {
     password: Yup.string().required("Veuillez inserer votre mot de passe  "),
   });
   const onSubmit = async (values) => {
-    const response = await fetch("http://127.0.0.1:4001/api/users/login", {
+    const response = await fetch("https://lizzy-app.onrender.com/api/users/login", {
       method: "POST",
       body: JSON.stringify(values),
       headers: {

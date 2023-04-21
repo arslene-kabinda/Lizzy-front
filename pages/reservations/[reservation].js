@@ -18,7 +18,7 @@ export default Reservation;
 export async function getServerSideProps(context) {
    
     const response = await fetch(
-      `http://127.0.0.1:4001/api/booking/${context.query.id}`
+      `https://lizzy-app.onrender.com/api/booking/${context.query.id}`
     );
   
     const booking = await response.json();
