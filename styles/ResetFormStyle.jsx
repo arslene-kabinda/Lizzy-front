@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import img from "../public/assets/R4.jpeg";
+import img from "../public/assets/bacground.jpeg";
 
 export const ResetFormContainer = styled.div`
   background-image: linear-gradient(
