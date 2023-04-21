@@ -15,7 +15,7 @@ const MonSalon = () => {
 
   const getBarberDetails = async (userId) => {
     const response = await fetch(
-      `http://127.0.0.1:4001/api/hairSalons/own/${userId}`
+      `https://lizzy-app.onrender.com/api/hairSalons/own/${userId}`
     );
     const data = await response.json();
     setBarberDescription(data.hairSalon);

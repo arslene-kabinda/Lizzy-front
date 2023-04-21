@@ -8,7 +8,6 @@ import TextField from "../../src/components/formUI/textField";
 import Select from "../../src/components/formUI/select";
 import establishment from "../../src/components/data/Establishment.json";
 import Button from "../../src/components/formUI/button";
-import uzCyrl from "date-fns/esm/locale/uz-Cyrl/index.js";
 import { ContainerForm } from "../../styles/FormAcountStyle";
 import { useRouter } from "next/router";
 

@@ -29,47 +29,47 @@ const responsive = {
 
 const items = [
   <CardPrestation
-    imagePreviews={imgPrestation3.src}
+    imagePreviews={imgPrestation3}
     alt="image preview "
     data-value="1"
   />,
   <CardPrestation
-    imagePreviews={imgPrestation6.src}
+    imagePreviews={imgPrestation6}
     alt="image previews"
     data-value="2"
   />,
   <CardPrestation
-    imagePreviews={imgPrestation9.src}
+    imagePreviews={imgPrestation9}
     alt="image previews"
     data-value="3"
   />,
   <CardPrestation
-    imagePreviews={imgPrestation8.src}
+    imagePreviews={imgPrestation8}
     alt="image preview "
     data-value="4"
   />,
   <CardPrestation
-    imagePreviews={imgPrestation5.src}
+    imagePreviews={imgPrestation5}
     alt="image previews"
     data-value="5"
   />,
   <CardPrestation
-    imagePreviews={imgPrestation.src}
+    imagePreviews={imgPrestation}
     alt="image previews"
     data-value="6"
   />,
   <CardPrestation
-    imagePreviews={imgPrestation2.src}
+    imagePreviews={imgPrestation2}
     alt="image previews"
     data-value="7"
   />,
   <CardPrestation
-    imagePreviews={imgPrestation4.src}
+    imagePreviews={imgPrestation4}
     alt="image previews"
     data-value="8"
   />,
   <CardPrestation
-    imagePreviews={imgPrestation7.src}
+    imagePreviews={imgPrestation7}
     alt="image previews"
     data-value="9"
   />,

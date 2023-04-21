@@ -2,11 +2,12 @@
 import React from "react";
 import { CardContainer } from "../home/prestation/prestationStyle";
 import { CardImage } from "./CardPrestionStyle";
+import Image from "next/image";
 
 const CardPrestation = ({ imagePreviews, alt }) => {
   return (
     <CardImage>
-      <img src={imagePreviews} alt={alt} />
+      <Image src={imagePreviews} alt={alt} />
     </CardImage>
   );
 };
