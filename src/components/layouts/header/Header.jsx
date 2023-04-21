@@ -61,15 +61,6 @@ const Header = () => {
                   <NavLinks> SALONS DE COIFFURE </NavLinks>
                 </Link>
 
-                <Link href='/reservations'>
-                  <NavLinks> MES RESERVATIONS </NavLinks>
-                </Link>
-
-                {user && (
-                  <Link href='/monSalon'>
-                    <NavLinks>MON SALON </NavLinks>
-                  </Link>
-                )}
 
                 <Link href='/mon_salon'>
                   <NavLinks>
